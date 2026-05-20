@@ -63,10 +63,14 @@ portage/
 
 ### 1. Install
 
-Portage skills are plain folders with a `SKILL.md` and (optionally) helper assets. To use them with Claude Code or Cowork:
+Portage skills are plain folders with a `SKILL.md` and (optionally) helper assets. To use them with Gemini CLI:
 
 ```bash
-git clone https://github.com/geoffsdesk/portage.git ~/.claude/skills/portage
+git clone https://github.com/rohinikrishna05/portage.git ~/.gemini/skills/portage
+```
+To use them with Antigravity:
+```bash
+git clone https://github.com/rohinikrishna05/portage.git <workspace-root>/.agents/skills/portage/
 ```
 
 Or vendor the skills you want into your team's plugin marketplace. See [docs/architecture.md](docs/architecture.md) for the skill loader contract.
