@@ -2,7 +2,7 @@
 
 **Agent-driven EKS → GKE migrations. PSO-grade outcomes, no PSO required.**
 
-Portage is an open-source library of Skills 2.0 — modular, composable agent prompts — that automate the work a Professional Services engagement would normally do to move a Kubernetes estate from Amazon EKS to Google Kubernetes Engine. Drop the skills into Claude (or any agent runtime that understands the [Skill format](docs/architecture.md#the-skill-format)), point them at a target environment, and they walk through discovery, design, translation, cutover, and day‑2 with you.
+Portage is an open-source library of Skills 2.0 — modular, composable agent prompts — that automate the work a Professional Services engagement would normally do to move a Kubernetes estate from Amazon EKS to Google Kubernetes Engine. Drop the skills into any agent runtime that understands the [Skill format](docs/architecture.md#the-skill-format) point them at a target environment, and they walk through discovery, design, translation, cutover, and day‑2 with you. We have tested it with Gemini CLI. 
 
 > A *portage* is the act of carrying a boat overland between two waterways. You put in on one side, you take out on the other, and in between you carry the load on your shoulders. That's what this is.
 
