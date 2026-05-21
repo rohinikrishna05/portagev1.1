@@ -34,8 +34,8 @@ For each data system in `inventory.json`, produce a plan document. Use one of th
 
 ```
 System:           prod-payments-db
-Source:           RDS Postgres 15.4, db.r6g.xlarge, Multi-AZ, 2TiB
-Target:           Cloud SQL Enterprise Plus Postgres 15, db-perf-optimized-N-8, HA, 2TiB
+Source:           RDS Postgres 
+Target:           Cloud SQL Postgres
 RPO target:       < 30s
 RTO target:       < 15 min
 Strategy:         Database Migration Service (continuous CDC), then switch primary
@@ -79,7 +79,7 @@ Strategy:         Database Migration Service (continuous CDC), then switch prima
    - Type: `New instance`. The destination's `postgres` admin password is set in the wizard.
    - Edition: Cloud SQL for PostgreSQL Enterprise (or Enterprise Plus).
    - Region/zone, optionally `Multiple zones (Highly available)`.
-   - Connectivity: Private IP (VPC peering — note: when DMS creates the destination, **only VPC peering is supported for private IP**; Private Service Connect requires migrating to a pre-existing instance).
+   - Connectivity: For source with public IP/DNS use IP Allowlist(Get SSL cert using curl -o global-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem). For source with private IP use Private IP (VPC peering — note: when DMS creates the destination, **only VPC peering is supported for private IP**; Private Service Connect requires migrating to a pre-existing instance).
    - Storage ≥ source DB size.
    - Encryption: Google-managed default, or CMEK with a key resource name like `projects/<p>/locations/<l>/keyRings/<kr>/cryptoKeys/<k>`.
    - Match source database flags where supported.
